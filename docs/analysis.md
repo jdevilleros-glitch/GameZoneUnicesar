@@ -1,29 +1,27 @@
-Personas
-    (nombre, id, telefono)
-- Clientes
-    (correo, historial)
-- Vendedores
-    (codemp, turno)
+User
+    (name, id, cellphone)
+- Client
+    (mail, history)
+- Seller
+    (codemp, shift)
 
-Productos
-    (id, titulo, precio, stock, descripcion)
-- Videojuego
-    (plataforma, genero, edadrating)
-- Consolas
-    (marca, modelo, generacion)
+Product
+    (id, title, price, stock, desc)
+- Videogame
+    (platform, genre, agerating)
+- Console
+    (brand, model, generation)
 
-Ventas (al menos un productosVenta, debe descontar del inventario cada producto vendido y si es insuficiente tampoco deja hacer la compra, el total es la suma de todos los productos duh)
-    (fecha, cliente, vendedor, productosVenta)
+Sell must have at least one product, must discount from stock everytime a product is sold, if there isnt enough stock it mustnt make the sell and the total is the sum of all the product prices duh)
+Sell    (date, client, seller, productsSold)
 
-Consultar:
-    - Inventario
-    - Listado de clientes
-    - Listado de vendedores
-    - Historial de ventas (total, de un cliente y de un vendedor)
+Must let consult:
+    - Inventory
+    - Client list
+    - Seller list
+    - Sell history (total, of one client and of one seller)
 
-Debe guardar todas las acciones hechas en archivos cada vez que se ejecute una accion
-
-debe estar en modelo vista - servicio - dao - model
+Must save all actions made on files everytime and action is made.
 
 1) According to the context of the project, every user must have an id, a name and a phone number. Then its said that a client needs an email, and a purchase history.
 Since User contains the common attributes between client and seller, this attributes are inherited and the specific attributes are added for each one.
